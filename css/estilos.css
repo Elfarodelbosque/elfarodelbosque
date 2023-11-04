@@ -20,7 +20,7 @@ body{
 
 .hero{
     width: 100%;
-    height: 100vh;
+    height: 50px;
     min-height: 600px;
     position: relative;
     display: grid;
@@ -115,9 +115,9 @@ body{
     top: 0%;
     right: 0%;
     width:  100%;
-    height: 100%;
-    background-image: url('../images/TR-CUADROS-33.jpg');
-    background-size: cover;
+    height: 7em;
+    background-color: #D6CFC8;
+
     z-index: -1;
     padding-left: 2em;
 }
@@ -175,10 +175,11 @@ body{
 /* Hero container */
 
 .hero__container{
-    padding: 10px ;
+
     margin: 25px;
     max-width: 80%;
-    padding-bottom: 450px;
+
+    
     margin: auto;
     --padding-container:0;
     display: grid;
@@ -189,6 +190,7 @@ body{
 }
 
 .hero__title{
+    margin-top: 2em;
     font-size: 2rem;
     
     
@@ -273,7 +275,21 @@ body{
     text-align: center;
 }
 
+.imagenfondo{
+    width: 100%;
+    margin-left: 20px;
+    margin-top: -35vw;
+    margin-bottom: 0%;
+    z-index: -3;
 
+
+    
+}
+
+.imagenfondos{
+    width: 90%;
+
+}
 
 /*carrusel*/
 
@@ -281,10 +297,11 @@ body{
  
 
 .carrusel{
-    width: 90%;
+    margin-top: -30px;
+    width: 87%;
     max-width: 120em;
     padding: 2em;
-    margin-left: 5%;
+    margin-left: 6%;
     border-radius: 10px;
     background: #e0e0e0;
     box-shadow:  6px 6px 12px #bebebe, -1px -1px 6px #f9f0e2; 
@@ -386,20 +403,21 @@ body{
     width: 80%;
     display: flex;
     gap: 1em;
-    margin-left: 10px;
+    margin-left: 6px;
+
 
     
 }
 
 .textocontacto{
-    width: 155px;
+    width: 150px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 3em;
     
 }
 
 .hola{
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #00102E;
 }
 

@@ -383,10 +383,10 @@ body{
 /*contacto*/
 
 .contactocontainer{
-    margin-top: -40em;
+    margin-top: -35em;
     width: 80%;
     display: flex;
-    gap: 2em;
+    gap: 1em;
     margin-left: 10px;
 
     
@@ -414,6 +414,7 @@ body{
 }
 
 .calle{
+    color: #00102E;
     align-items: center;
     padding: 0.5em;
     margin-top: 15px;
@@ -432,6 +433,7 @@ body{
     margin-top: 20px;
 }
 .numero{
+    color: #00102E;
     margin-top: 6px;
     align-items: center;
     padding: 0.5em;

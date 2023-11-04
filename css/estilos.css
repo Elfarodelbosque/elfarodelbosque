@@ -118,7 +118,6 @@ body{
     height: 100%;
     background-image: url('../images/TR-CUADROS-33.jpg');
     background-size: cover;
-    background-position: center;
     z-index: -1;
     padding-left: 2em;
 }

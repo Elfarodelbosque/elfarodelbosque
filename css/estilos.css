@@ -24,11 +24,91 @@ body{
     min-height: 600px;
     position: relative;
     display: grid;
-    grid-template-rows: 136px 1fr;
+    grid-template-rows: 120px 1fr;
     color: #00102E;
 
 }
 
+.heros{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 120px 1fr;
+    color: #00102E;
+
+
+}
+
+.heros::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width:  100%;
+    height: 7em;
+    background-color: #D6CFC8;
+
+    
+    z-index: -1;
+    padding-left: 2em;
+}
+
+.heross{
+    width: 100%;
+    height: 50%;
+    min-height: 100px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 120px 1fr;
+    color: #00102E;
+    align-items: center;
+
+
+}
+
+.heross::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width:  100%;
+    height: 7em;
+    background-color: #D6CFC8;
+
+    
+    z-index: -1;
+    padding-left: 2em;
+}
+
+
+.herosss{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 120px 1fr;
+    color: #00102E;
+    align-items: center;
+
+
+}
+
+.herosss::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width:  100%;
+    height: 7em;
+    background-color: #D6CFC8;
+
+    
+    z-index: -1;
+    padding-left: 2em;
+}
 .hero::before{
     content: "";
     position: absolute;
@@ -38,6 +118,7 @@ body{
     height: 100%;
     background-image: url('../images/TR-CUADROS-33.jpg');
     background-size: cover;
+    background-position: center;
     z-index: -1;
     padding-left: 2em;
 }
@@ -62,6 +143,8 @@ body{
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 1em;
+    color: #00102E;
+    text-decoration: none;
 }
 
 .nav__items{
@@ -110,6 +193,85 @@ body{
     font-size: 2rem;
     
     
+}
+
+
+.heros__container{
+    padding: 10px ;
+    margin: 25px;
+    max-width: 80%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    margin: auto;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1.5em;
+    text-align: center;
+}
+
+.heros__title{
+    font-size: 1.5rem;
+    
+    
+}
+
+
+  
+
+.heross__container{
+    padding: 10px ;
+    margin: 25px;
+    max-width: 80%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    margin: auto;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 2em;
+    text-align: center;
+}
+
+.candado{
+    width: 30%;
+ 
+    margin: 50px;
+    margin-bottom: 100px;
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+
+
+
+}
+
+
+
+
+.heross__title{
+    font-size: 2rem;
+    
+    
+}
+
+.herosss__container{
+    padding: 10px ;
+    margin: 25px;
+    max-width: 80%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    margin: auto;
+    --padding-container:0;
+    display: grid;
+    grid-template-columns: 50%,50%;
+    align-content: center;
+    gap: 2em;
+    text-align: center;
 }
 
 
@@ -187,4 +349,93 @@ body{
     background-color: rgb(255, 255, 255);
     z-index: -1;
     opacity: 0;
+}
+
+
+
+
+
+
+
+.imagenes{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
+    gap: 4em;
+}
+
+
+
+
+
+.imagenesropa{
+    border-radius: 2px;
+    width: 90%;
+    height: auto;
+    background: #e0e0e0;
+    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    margin-left: 15px;
+    
+
+}
+
+
+/*contacto*/
+
+.contactocontainer{
+    margin-top: -40em;
+    width: 80%;
+    display: flex;
+    gap: 2em;
+    margin-left: 10px;
+
+    
+}
+
+.textocontacto{
+    width: 155px;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+.hola{
+    font-size: 1.4em;
+    color: #00102E;
+}
+
+.info__contenedor{
+    width: 90%;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.calle{
+    align-items: center;
+    padding: 0.5em;
+    margin-top: 15px;
+    background-position: center;
+    background-color: #B5BBC5;
+    border-radius: 15px;
+    
+}
+
+.info__numero{
+    width: 90%;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+.numero{
+    margin-top: 6px;
+    align-items: center;
+    padding: 0.5em;
+    background-position: center;
+    background-color: #B5BBC5;
+    border-radius: 15px;
 }

@@ -518,6 +518,9 @@ body{
 
     
 }
+.fotocontacto{
+    border-radius: 30px;
+}
 
 .textocontacto{
     width: 150px;
@@ -602,7 +605,8 @@ body{
     }
 
     .contactocontainer{
-        gap: 0.2rem;
+        gap: 1.2rem;
+        width: 95%;
     }
 
     .heross__title{
@@ -610,5 +614,11 @@ body{
     }
     .heros__title{
         font-size: 1.8rem;
+    }
+}
+
+@media( min-width:380px){
+    .container{
+        gap: 1.2em
     }
 }

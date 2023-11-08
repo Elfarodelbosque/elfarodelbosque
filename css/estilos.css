@@ -8,6 +8,13 @@
 
 body{
     font-family: 'Italiana', sans-serif;
+    background-color: #d6cfc8;
+
+    background-image: linear-gradient(to right, #2e1a060b, #2e1a060b 5px, #d6cfc8 5px, #d6cfc8 );
+    background-size: 10px 100%;
+ 
+   
+    
 }
 
 .container{
@@ -334,7 +341,7 @@ body{
     width: 200%;
     border-radius: 10px;
     background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #f9f0e2;
 
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -491,7 +498,7 @@ body{
     width: 100%;
     height: auto;
     background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ebe3db;
    
     
 

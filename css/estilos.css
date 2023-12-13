@@ -506,23 +506,24 @@ body{
 }
 
 .imagenesreb__leftarrow{
-    width: 50%;
+    width: 70%;
     grid-column: 1/2;
     grid-row: 2/3; 
     margin: auto; 
     background-color: #859ac2;
     border-radius: 50%;
-    box-shadow:  2px 2px 6px #2f2f2fb0, -2px -2px 6px #4b4b4ab5;  
+    box-shadow:  2px 2px 6px #2f2f2f5e, -2px -2px 6px #4b4b4a44;  
 }
 
 .imagenesreb__arrow{
-    width: 50%;
+    width: 70%;
     grid-column: 3/4;
     grid-row: 2/3;
     margin: auto;
     background-color: #859ac2;
     border-radius: 50%;
-    box-shadow:  2px 2px 6px #2f2f2fb0, -2px -2px 6px #4b4b4ab5; 
+    box-shadow:  2px 2px 6px #2f2f2f5e, -2px -2px 6px #4b4b4a44;
+
 }
 
 .imagenesreb__body{
@@ -883,6 +884,16 @@ body{
     .rebaja{
         padding-top: 170px;
     }
+
+    .imagenesrebs{
+        width: 94%;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+        gap: 2em;
+        margin: auto;
+        padding-top: 200px;
+    
+    }
     
 
     .imagenes{
@@ -929,7 +940,7 @@ body{
 
     .imagenesreb{
         gap: 4em;
-        padding-top: 200px;
+    
     }
 
     .contactocontainer{

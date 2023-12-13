@@ -482,9 +482,256 @@ body{
 }
 
 
+/*rebajas*/
+
+.rebejas{
+    gap: 1em;
+}
+
+.imagenesrebs{
+    width: 94%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+    gap: 2em;
+    margin: auto;
+
+}
 
 
+.imagenesreb__cont{
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    gap: 1em;
+    align-items: center;
+}
 
+.imagenesreb__leftarrow{
+    width: 50%;
+    grid-column: 1/2;
+    grid-row: 2/3; 
+    margin: auto; 
+    background-color: #859ac2;
+    border-radius: 50%;
+    box-shadow:  2px 2px 6px #2f2f2fb0, -2px -2px 6px #4b4b4ab5;  
+}
+
+.imagenesreb__arrow{
+    width: 50%;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    margin: auto;
+    background-color: #859ac2;
+    border-radius: 50%;
+    box-shadow:  2px 2px 6px #2f2f2fb0, -2px -2px 6px #4b4b4ab5; 
+}
+
+.imagenesreb__body{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body1{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show1{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body2{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show2{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body3{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show3{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body4{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show4{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+.imagenesreb__body5{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show5{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body6{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show6{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body7{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show7{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body8{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show8{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+.imagenesreb__body9{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show9{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body10{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show10{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body11{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show11{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body12{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show12{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body13{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show13{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.imagenesreb__body14{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imagenesreb__body--show14{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
 
 
 .imagenes{
@@ -590,7 +837,7 @@ body{
     display: grid;
     grid-auto-rows: max-content;
     align-content: center;
-    gap: 2em;
+    gap: 0.5em;
     text-align: center;
 }
 
@@ -599,7 +846,7 @@ body{
   
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
-    gap: 14em;
+    gap: 4em;
     margin: auto;
 
 }

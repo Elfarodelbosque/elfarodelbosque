@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro Del Bosque</title>
+    <link rel="shortcut icon" href="./images/farologoblanco.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/carrusel.css">
+    <meta name="theme-color" content="#00102E"> 
+
+
+
+
+    <meta name="title" content="El Faro del Bosque - Tienda de ropa" />
+    <meta name="description" content="Tienda de ropa en calle Mesena 106" />
+
+   
+    <title>El Faro del Bosque</title>
+    <meta name="title" content="El Faro del Bosque" />
+    <meta name="description" content="Página web de la tienda El faro del Bosque, calle mesena 106" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elfarodelbosque.github.io/" />
+    <meta property="og:title" content="El Faro del Bosque" />
+    <meta property="og:description" content="Página web de la tienda El faro del Bosque, calle mesena 106" />
+    <meta property="og:image" content="" />
+
+ 
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://elfarodelbosque.github.io/" />
+    <meta property="twitter:title" content="El Faro del Bosque" />
+    <meta property="twitter:description" content="Página web de la tienda El faro del Bosque, calle mesena 106" />
+    <meta property="twitter:image" content="<!-- Primary Meta Tags -->
+    <title>El Faro del Bosque</title>
+    <meta name="title" content="El Faro del Bosque" />
+    <meta name="description" content="Página web de la tienda El faro del Bosque, calle mesena 106" />
+    
+   
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elfarodelbosque.github.io/" />
+    <meta property="og:title" content="El Faro del Bosque" />
+    <meta property="og:description" content="Página web de la tienda El faro del Bosque, 
+    calle mesena 106" />
+    <meta property="og:image" content="https://elfarodelbosque.github.io/images/logo.png" />
+    
+   
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://elfarodelbosque.github.io/" />
+    <meta property="twitter:title" content="El Faro del Bosque" />
+    <meta property="twitter:description" content="Página web de la tienda El faro del Bosque, calle mesena 106" />
+    <meta property="twitter:image" content="https://elfarodelbosque.github.io/images/logo.png" />
+    
+  
+
+
+
+
+    
+</head>
+
+
+
+<body>
+<header class="hero">
+    <div class="navbar">
+        <div class="logo"><a>El Faro del Bosque</a></div>
+        <ul class="links">
+            <li class="nav__items">
+                <a href="index.html" class="nav__links">Inicio</a>
+            </li>
+            <li class="nav__items">
+                <a href="LookBook.html" class="nav__links">LookBook</a>
+                
+            </li>
+            <li class="nav__items">
+                <a href="Rebajas.html" class="nav__links">CatáLogo</a>
+            </li>
+            <li class="nav__items">
+                <a href="Contacto.html" class="nav__links">Contacto</a>
+            </li>
+
+        </ul>
+
+        <div class="toggle_btn"><i class="fa-solid fa-barcode"></i>
+        </div>
+    
+
+
+    </div>
+
+    <div class="dropdown_menu">
+        <li class="nav__items">
+            <a href="index.html" class="nav__links">Inicio</a>
+        </li>
+        <li class="nav__items">
+            <a href="LookBook.html" class="nav__links">LookBook</a>
+            
+        </li>
+        <li class="nav__items">
+            <a href="Rebajas.html" class="nav__links">CatáLogo</a>
+        </li>
+        <li class="nav__items">
+            <a href="Contacto.html" class="nav__links">Contacto</a>
+        </li>
+
+    </div>
+   
+</header>
+
+<main>
+    <section id="hero">
+        <img src="images/fondofaro.jpg" class="fondofaro">
+
+    </section>
+</main>
+
+<script>
+    const togglebtn = document.querySelector('.toggle_btn')
+    const togglebtnIcon = document.querySelector('.toggle_btn i')
+    const dropdownmenu = document.querySelector('.dropdown_menu')
+
+    togglebtn.onclick = function () {
+        dropdownmenu.classList.toggle('open')
+        const isOpen =dropdownmenu.classList.contains('open')
+
+        togglebtnIcon.classList = isOpen
+           ? 'fa-solid fa-xmark'
+           : 'fa-solid fa-barcode'
+    }
+
+</script>
+
+</body>

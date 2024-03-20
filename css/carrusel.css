@@ -1,58 +1,126 @@
-.carrusel{
-    width: 10%;
-    max-width: 120em;
-    padding: 2em;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff; 
+body {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    background-image: url("images/fondofaro.jpg") ;
+    background-size: cover;
+    background-position: center;
+
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: coral;
+}
+
+/*header*/
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: blue;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* menu*/
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*hero*/
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*responsive*/
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
     
 
-}
-.carrusel .grande{
-    width: 200%;
-    border-radius: 50px;
-    background: #e90a0a;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
 
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: space-between;
-    align-content: center;
-    padding: 2em;
-
-    transition: all ,5s ease;
-    transform: translateX(0%);
-}
-.carrusel .img{
-    width: calc(100%/ 2 - 2em);
-    min-height: 10vh;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-    padding: 2em;
-}
-.carrusel .puntos{
-    width: 100%;
-    padding: .4em;
-    margin: 1em 0 0;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.carrusel .punto{
-    width: 2em;
-    height: 2em;
-    margin: 1em 1em 0;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    .navbar .toggle_btn {
+        display: block;
 }
 
-.carrusel .punto.activo{
-    background-color: #00102E;
+.dropdown_menu{
+    display: block;
 }
+
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+}
+ }

@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./images/farologoblanco.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <meta name="theme-color" content="#00102E"> 
 
@@ -63,39 +64,103 @@
 
     
 
-    <header class="hero">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <h2 class="nav__title">El Faro del Bosque</h2>
-            </div>
+    
 
-            <ul class="nav__link nav__link--menu">
+    <header class="hero">
+        <div class="navbar">
+            <div class="logo"><a>El Faro del Bosque</a></div>
+            <ul class="links">
                 <li class="nav__items">
                     <a href="index.html" class="nav__links">Inicio</a>
                 </li>
                 <li class="nav__items">
                     <a href="LookBook.html" class="nav__links">LookBook</a>
+                    
                 </li>
                 <li class="nav__items">
-                    <a href="Rebajas.html" class="nav__links">Rebajas</a>
+                    <a href="Rebajas.html" class="nav__links">CatáLogo</a>
                 </li>
                 <li class="nav__items">
                     <a href="Contacto.html" class="nav__links">Contacto</a>
                 </li>
-
-                <img src="./images/leftarrow.svg" class="nav__close" alt="">
+    
             </ul>
-
-            <div class="nav__menu">
-                <img src="./images/arrow.svg" class="nav__img" alt="">
+    
+            <div class="toggle_btn"><i class="fa-solid fa-barcode"></i>
             </div>
-        </nav>
+        
+    
+    
+        </div>
+    
+        <div class="dropdown_menu">
+            <li class="nav__items">
+                <a href="index.html" class="nav__links">Inicio</a>
+            </li>
+            <li class="nav__items">
+                <a href="LookBook.html" class="nav__links">LookBook</a>
+                
+            </li>
+            <li class="nav__items">
+                <a href="Rebajas.html" class="nav__links">CatáLogo</a>
+            </li>
+            <li class="nav__items">
+                <a href="Contacto.html" class="nav__links">Contacto</a>
+            </li>
+    
+        </div>
+       
+    </header>
 
+    <main>
         <section class="hero__container container">
-            <h1 class="hero__title">¡BIENVENIDO AL FARO DEL BOSQUE!</h1>
+            <img src="images/[0001-0260]_1.gif" class="videoinicio">
+            
+        </section>
+        <section class="heroT__container container">
+            
+            <h1 class="hero__title">¡BIENVENIDO A <span class="typed"></span></h1>
         </section>
 
-        <section class="imagenfondo">
+        <div class="beis">
+            <span>hola</span>
+        </div>
+
+        <section class="hero__container">
+            
+           
+        </section>
+        <section class="fotosprincipal">
+            <img src="images/REVISTA.jpg" alt="LookBook"class="LookBook">
+        </section>
+
+        <div class="beis">
+            <span>hola</span>
+        </div>
+        <div>
+        <section class="hero__container">
+           
+           
+        </section>
+        <section class="fotosprincipal">
+            <img src="images/CATALOGO.png" alt="LookBook"class="Catalogo">
+        </section></div>
+
+        <div class="beis">
+            <span>hola</span>
+        </div>
+
+        <section class="hero__container">
+            
+           
+        </section>
+
+        
+        <section class="fotosprincipal">
+            <img src="images/nEWSLETTER.png" alt="LookBook"class="NEWS">
+        </section>
+
+  <!--     <section class="imagenfondo">
             <img src="./images/TR-CUADROS-33.jpg" alt="imagenfondo" class="imagenfondos">
         </section>
 
@@ -157,17 +222,28 @@
             </div>
 
 
-        </section>
-
-        
-
-
-    </header>
-
+        </section> -->
+    </main>
  
 
-
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/texto.js"></script>
+    <script>
+        const togglebtn = document.querySelector('.toggle_btn')
+        const togglebtnIcon = document.querySelector('.toggle_btn i')
+        const dropdownmenu = document.querySelector('.dropdown_menu')
+    
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle('open')
+            const isOpen =dropdownmenu.classList.contains('open')
+    
+            togglebtnIcon.classList = isOpen
+               ? 'fa-solid fa-xmark'
+               : 'fa-solid fa-barcode'
+        }
+    
+    </script>
 
 </body>
 </html>

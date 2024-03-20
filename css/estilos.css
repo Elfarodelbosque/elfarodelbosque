@@ -1,28 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root{
     --padding-container: 100px 0;
-    --color-title: #00102E
+    --color-title: #0e0a32
 
 }
 
 body{
-    font-family: 'Italiana', sans-serif;
-    background-color: #d6cfc8;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #ffffff;
 
-    background-image: linear-gradient(to right, #2e1a060b, #2e1a060b 5px, #d6cfc8 5px, #d6cfc8 );
-    background-size: 10px 100%;
+    
+   
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    background-image: url("images/fondofaro.jpg") ;
+    background-size: cover;
+    background-position: center;
  
    
     
 }
 
 .container{
-    width: 90%;
-    max-width: 1200px;
+    
     min-width: 90px;
-    margin: 0% auto;
-    gap: 0.2rem;
+    margin:  auto;
+    gap: 10rem;
 
 
 }
@@ -31,101 +35,25 @@ body{
 
 .hero{
     width: 100%;
-    height: 50px;
-    min-height: 600px;
-    position: relative;
-    display: grid;
-    grid-template-rows: 120px 1fr;
-    color: #00102E;
-
-}
-
-.heros{
-    width: 100%;
-
-    position: relative;
-    display: grid;
-    grid-template-rows: 120px 1fr;
-    color: #00102E;
-
-
-}
-
-.heros::before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width:  100%;
-    height: 7em;
-    background-color: #D6CFC8;
-
+    margin-top: 50px;
+    margin-bottom: 20px;
     
-    z-index: -1;
-    padding-left: 2em;
-}
-
-.heross{
-    width: 100%;
-    height: 50%;
-    min-height: 100px;
     position: relative;
     display: grid;
-    grid-template-rows: 120px 1fr;
-    color: #00102E;
-    align-items: center;
-
+    grid-template-rows:  1fr;
+    color: #0e0a32;
 
 }
 
-.heross::before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width:  100%;
-    height: 7em;
-    background-color: #D6CFC8;
 
-    
-    z-index: -1;
-    padding-left: 2em;
-}
-
-
-.herosss{
-    width: 100%;
-
-    position: relative;
-    display: grid;
-    grid-template-rows: 120px 1fr;
-    color: #00102E;
-    align-items: center;
-
-
-}
-
-.herosss::before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width:  100%;
-    height: 7em;
-    background-color: #D6CFC8;
-
-    
-    z-index: -1;
-    padding-left: 2em;
-}
 .hero::before{
     content: "";
     position: absolute;
     top: 0%;
     right: 0%;
     width:  100%;
-    height: 7em;
-    background-color: #D6CFC8;
+    
+    background-color: #ffffff;
 
     z-index: -1;
     padding-left: 2em;
@@ -152,7 +80,7 @@ body{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 1em;
+    gap: 2em;
     color: #00102E;
     text-decoration: none;
    
@@ -190,29 +118,47 @@ body{
 /* Hero container */
 
 .hero__container{
+    width: 100%;
+    align-items: center;
+    
+   
 
-
-    max-width: 80%;
 
     
+
+    
+   
+    
+}
+
+.heroT__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    --padding-container:0;
-    display: grid;
-    grid-auto-rows: max-content;
-    align-content: center;
-    gap: 1em;
-    text-align: center;
+    padding: 100PX 100px 100PX 100px;
+    background-color: #eef2ff62;
 }
 
 .hero__title{
-    margin: auto;
-    font-size: 4rem;
-    padding: 2em 0px;
+    
+    font-size: 2.5rem;
+    padding: 40px 40px 40px 40px;
+    font-weight: 400;
+    color: #859ac2;
+    background-color: #0e0a32;
+    border-radius: 15px;
+    text-align: center;
     
     
 }
 
-
+.hero__title .nombre{
+    font-weight: 300;
+    color: #ffffff;
+    font-style: normal;
+}
 .heros__container{
     padding: 10px ;
     margin: 25px;
@@ -267,7 +213,9 @@ body{
 
 }
 
-
+.videoinicio{
+    width: 100%;
+}
 
 
 .heross__title{
@@ -277,23 +225,21 @@ body{
 }
 
 .herosss__container{
-    padding: 10px ;
-    margin: 25px;
-    max-width: 80%;
-    padding-bottom: 100px;
-    padding-top: 100px;
+    padding: 0px ;
     margin: auto;
-    --padding-container:0;
-    display: grid;
-    grid-template-columns: 50%,50%;
-    align-content: center;
-    gap: 2em;
-    text-align: center;
+    max-width: 100%;
+    
+    
+   
+   
+   
+   
 }
 
 .imagenfondo{
     max-width:  90%;
     margin: auto;
+    
 
     z-index: -3;
 
@@ -320,6 +266,39 @@ body{
 .imagenfondos2{
     width: 100%;
 
+}
+
+
+.subtitulos{
+    font-weight: 900;
+    font-size: 180px;
+    line-height: 135px;
+    letter-spacing: -30px;
+}
+
+.fotosprincipal{
+    width: 110%;
+    padding-top: 1%;
+    margin: auto;
+    
+    background-color: #ff620062;
+    align-content: center;
+}
+
+.LookBook{
+    width: 100%;
+    
+    gap: auto;
+}
+
+.Catalogo{
+    width: 100%;
+    gap: auto;
+}
+
+.NEWS{
+    width: 100%;
+    gap: auto;
 }
 /*carrusel*/
 
@@ -734,26 +713,24 @@ body{
 
 }
 
-
-.imagenes{
-    width: 94%;
+.imagenlook{
+    width: 100%;
   
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
-    gap: 14em;
-    margin: auto;
+    grid-template-columns: 50% 50%;
 }
 
 
 
 
 
+
+
 .imagenesropa{
-    border-radius: 2px;
+   
     width: 100%;
-    height: auto;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ebe3db;
+    padding: 63px 3px 10px 4px;
+    
    
     
 
@@ -763,24 +740,25 @@ body{
 /*contacto*/
 
 .contactocontainer{
-    margin-top: 4em;
+    margin-top: 2em;
     width: 99%;
     display: flex;
     gap: 1em;
     margin-left: 6px;
     justify-content: center;
+    align-items: center;
 
 
     
 }
 .fotocontacto{
-    border-radius: 30px;
+    width: 100%;
 }
 
 .textocontacto{
     width: 150px;
-    text-align: center;
-    padding-top: 3em;
+    
+    
     
 }
 
@@ -804,7 +782,7 @@ body{
     padding: 0.5em;
     margin-top: 16px;
     background-position: center;
-    background-color: #B5BBC5;
+   
     border-radius: 15px;
     
 }
@@ -823,7 +801,7 @@ body{
     align-items: center;
     padding: 0.5em;
     background-position: center;
-    background-color: #B5BBC5;
+   
     border-radius: 15px;
 }
 
@@ -852,28 +830,162 @@ body{
 
 }
 
+
+body {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    background-image: url("images/fondofaro.jpg") ;
+    background-size: cover;
+    background-position: center;
+
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #00102E;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: coral;
+}
+
+/*header*/
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #00102E;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* menu*/
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*responsive*/
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+    
+
+
+    .navbar .toggle_btn {
+        display: block;
+}
+
+.dropdown_menu{
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+}
+ }
+
 /*MEDIA*/
 
 @media (max-width:500px){
-
+    .hero{
+        margin-top: 10px;
+    }
     .nav{
         height: 15%;
+        display: grid;
+        grid-template-rows: 20px 50px;
+        
     }
   
     .nav.container{
         width: 95%;
-        margin: 0 10px;
-        position: fixed;
-        background-color: #d6cfc8;
+        margin: 0 10px 0 10px;
+        
+        
+       
         z-index: 100;
    
     }
 
+    .container{
+        gap: 0rem;
+    }
+
     .hero__container{
-        padding-top: 100px;
+        
 
     
     }
+
+    .videoinicio{
+        
+    }
+
+  
 
     .heros__container{
         padding-top: 170px;
@@ -891,18 +1003,18 @@ body{
         grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
         gap: 2em;
         margin: auto;
-        padding-top: 200px;
+        
     
     }
     
 
     .imagenes{
-        padding-top: 200px;
+       
     }
 
     .heross__container{
-        padding-top: 200px;
-        width: 80%;
+       
+       
 
     
     }
@@ -913,12 +1025,42 @@ body{
     
     }
 
- 
+    .heroT__container{
+        padding: 0px 0px 0px 0px;
+        margin: auto;
+        
 
-
+    
+    }
 
     .hero__title{
-        font-size: 2rem;
+        font-size: 1rem;
+        padding: 20px 20px 20px 20px;
+    }
+
+
+
+
+    .nav__title{
+        font-size: 10px;
+        width: 80%;
+        
+        align-content: center;
+    }
+    .nav__link{
+        font-size: 10px;
+        width: 100%;
+        padding-right: 10px;
+        gap: 1.5rem;
+        
+        
+    }
+
+    .nav__links{
+        
+        
+        
+        
     }
 
     .grande{
@@ -957,21 +1099,20 @@ body{
 }
 
 @media( min-width:380px){
-    .container{
-        gap: 1.2em
-    }
+
 }
+    
 
 @media(max-width:355px){
    
 
     .nav__link{
-        gap: 0.5em;
+       
 
     }
 
     .nav__links{
-        font-size: 15px;
+        
     }
 
 

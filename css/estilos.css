@@ -215,6 +215,8 @@ body{
 
 .videoinicio{
     width: 100%;
+    
+    
 }
 
 
@@ -277,7 +279,7 @@ body{
 }
 
 .fotosprincipal{
-    width: 110%;
+    width: 100%;
     padding-top: 1%;
     margin: auto;
     
@@ -470,7 +472,7 @@ body{
 .imagenesrebs{
     width: 94%;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
     gap: 2em;
     margin: auto;
 
@@ -889,6 +891,28 @@ header{
     display: none;
 }
 
+.action_btn{
+    background-color: coral;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: #ffffff;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
 /* menu*/
 .dropdown_menu {
     display: none;
@@ -920,6 +944,18 @@ header{
     display: flex;
     justify-content: center;
 }
+.holan{
+    padding: 1rem;
+    font-size: 1.2em;
+    color: #00102E;
+}
+
+.News{
+    padding: 1rem;
+    
+    text-align: justify;
+}
+
 
 /*responsive*/
 
@@ -946,7 +982,7 @@ header{
     }
 
 }
- }
+ 
 
 /*MEDIA*/
 
@@ -975,15 +1011,9 @@ header{
         gap: 0rem;
     }
 
-    .hero__container{
-        
-
     
-    }
 
-    .videoinicio{
-        
-    }
+  
 
   
 
@@ -1008,17 +1038,8 @@ header{
     }
     
 
-    .imagenes{
-       
-    }
 
-    .heross__container{
-       
-       
-
-    
-    }
-
+  
     .herosss__container{
         padding-top: 120px;
 
@@ -1056,11 +1077,7 @@ header{
         
     }
 
-    .nav__links{
-        
-        
-        
-        
+   
     }
 
     .grande{
@@ -1096,7 +1113,7 @@ header{
     .heros__title{
         font-size: 1.8rem;
     }
-}
+
 
 @media( min-width:380px){
 
@@ -1106,14 +1123,7 @@ header{
 @media(max-width:355px){
    
 
-    .nav__link{
-       
-
-    }
-
-    .nav__links{
-        
-    }
+    
 
 
 }

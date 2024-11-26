@@ -757,6 +757,8 @@ body{
 
 
 
+
+
 .imagenesropa{
    
     width: 100%;
@@ -957,6 +959,11 @@ header{
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.imagenlook--show {
+    display: none;
+    position: absolute;
+}
+
 .dropdown_menu.open {
     height: 260px;
 }
@@ -1003,15 +1010,46 @@ header{
         display: block;
 }
 
-.dropdown_menu{
+    .dropdown_menu{
     display: block;
 }
+
+.imagenlook{
+    
+  
+    display: none
+    
+}
+
+.imagenlook--show {
+    width: 100%;
+
+    display: block;
+    grid-template-columns: 50% 50%;
+}
+   
 
 @media (max-width: 576px) {
     .dropdown_menu{
         left: 2rem;
         width: unset;
     }
+
+    .imagenlook--show {
+        width: 100%;
+  
+        display: block;
+        grid-template-columns: 50% 50%;
+    }
+
+    .imagenlook{
+    
+  
+        display: none;
+        
+    }
+
+
 
 }
 }

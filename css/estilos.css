@@ -1038,7 +1038,11 @@ header{
 }
 
 .cata{
-    background-color: #e5e3df;
+    
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 
 /*responsive*/

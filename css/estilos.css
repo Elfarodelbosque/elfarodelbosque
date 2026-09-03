@@ -803,10 +803,9 @@ body{
 }
 
 .textocontacto{
-    width: 150px;
-    
-    
-    
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 560px;
 }
 
 .hola{
@@ -828,10 +827,11 @@ body{
     align-items: center;
     padding: 0.5em;
     margin-top: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
     background-position: center;
-   
+
     border-radius: 15px;
-    
+
 }
 
 .info__numero{
@@ -847,8 +847,9 @@ body{
     margin-top: 10px;
     align-items: center;
     padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.9);
     background-position: center;
-   
+
     border-radius: 15px;
 }
 
@@ -877,15 +878,6 @@ body{
 
 }
 
-
-body {
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    background-image: url("images/fondofaro.jpg") ;
-    background-size: cover;
-    background-position: center;
-
-}
 
 li {
     list-style: none;
@@ -1309,20 +1301,49 @@ header{
         font-size: 1.8rem;
     }
 
-
-@media( min-width:380px){
-
-}
-    
-
-@media(max-width:355px){
-   
-
-    
-
-
+/* Accesibilidad: enlace para saltar el menú e ir directo al contenido */
+.skip-link{
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1000;
+    background-color: #00102E;
+    color: #ffffff;
+    padding: 0.8em 1.2em;
+    border-radius: 0 0 8px 0;
 }
 
-@media( width < 1200px){
-   
+.skip-link:focus{
+    left: 0;
+}
+
+/* Foco visible para navegación por teclado */
+a:focus-visible,
+button:focus-visible{
+    outline: 3px solid coral;
+    outline-offset: 2px;
+}
+
+.dropdown_menu{
+    margin: 0;
+    padding-left: 0;
+}
+
+.toggle_btn{
+    background: none;
+    border: none;
+}
+
+/* Texto solo para lectores de pantalla: mantiene la jerarquía de
+   encabezados correcta sin cambiar el diseño visual de la página */
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

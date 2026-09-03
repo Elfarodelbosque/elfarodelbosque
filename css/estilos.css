@@ -2,12 +2,22 @@
 
 :root{
     --padding-container: 100px 0;
-    --color-title: #0e0a32
+    --color-title: #0e0a32;
 
+    /* Paleta de marca */
+    --color-navy: #00102E;
+    --color-navy-deep: #0e0a32;
+    --color-accent: #859ac2;
+    --color-coral: #ff6200;
+    --color-cream: #f9f0e2;
+    --color-white: #ffffff;
+
+    --font-heading: "Josefin Sans", sans-serif;
+    --font-body: "Josefin Sans", sans-serif;
 }
 
 body{
-    font-family: "Josefin Sans", sans-serif;
+    font-family: var(--font-body);
     background-color: #ffffff;
 
     
@@ -41,7 +51,7 @@ body{
     position: relative;
     display: grid;
     grid-template-rows:  1fr;
-    color: #0e0a32;
+    color: var(--color-navy-deep);
 
 }
 
@@ -81,7 +91,7 @@ body{
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 2em;
-    color: #00102E;
+    color: var(--color-navy);
     text-decoration: none;
    
     
@@ -93,7 +103,7 @@ body{
 
 
 .nav__links{
-    color: #00102E;
+    color: var(--color-navy);
     text-decoration: none;
     display: block;
 
@@ -146,8 +156,8 @@ body{
     font-size: 2.5rem;
     padding: 40px 40px 40px 40px;
     font-weight: 400;
-    color: #859ac2;
-    background-color: #0e0a32;
+    color: var(--color-accent);
+    background-color: var(--color-navy-deep);
     border-radius: 15px;
     text-align: center;
     
@@ -158,6 +168,26 @@ body{
     font-weight: 300;
     color: #ffffff;
     font-style: normal;
+}
+
+.hero__intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    text-align: center;
+}
+
+.hero__subtitle{
+    max-width: 40em;
+    font-size: 1.1rem;
+    color: var(--color-navy);
+    margin: 0;
+}
+
+.hero__cta{
+    font-size: 0.95rem;
+    padding: 0.7rem 1.8rem;
 }
 .heros__container{
     padding: 10px ;
@@ -215,8 +245,8 @@ body{
 
 .videoinicio{
     width: 100%;
-    
-    
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(14, 10, 50, 0.18);
 }
 
 
@@ -287,20 +317,18 @@ body{
     align-content: center;
 }
 
-.LookBook{
-    width: 100%;
-    
-    gap: auto;
-}
-
-.Catalogo{
-    width: 100%;
-    gap: auto;
-}
-
+.LookBook,
+.Catalogo,
 .NEWS{
     width: 100%;
-    gap: auto;
+    display: block;
+    transition: opacity 0.25s ease;
+}
+
+.fotosprincipal a:hover .LookBook,
+.fotosprincipal a:hover .Catalogo,
+.fotosprincipal a:hover .NEWS{
+    opacity: 0.92;
 }
 
 .textonewsletter{
@@ -322,7 +350,7 @@ body{
 
     border-radius: 10px;
     background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -1px -1px 6px #f9f0e2; 
+    box-shadow:  6px 6px 12px #bebebe, -1px -1px 6px var(--color-cream); 
     overflow: hidden;
     
 
@@ -375,7 +403,7 @@ body{
 }
 
 .carrusel .punto.activo{
-    background-color: #00102E;
+    background-color: var(--color-navy);
 }
 
 .beis{
@@ -402,7 +430,7 @@ body{
 
     border-radius: 10px;
     background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -1px -1px 6px #f9f0e2; 
+    box-shadow:  6px 6px 12px #bebebe, -1px -1px 6px var(--color-cream); 
     overflow: hidden;
     
 
@@ -455,7 +483,7 @@ body{
 }
 
 .carrusel2 .punto2.activo2{
-    background-color: #00102E;
+    background-color: var(--color-navy);
 }
 
 .beis{
@@ -749,10 +777,11 @@ body{
 }
 
 .imagenlook{
-    width: 100%;
-  
+    width: 94%;
+    margin: auto;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
 }
 
 
@@ -764,13 +793,20 @@ body{
 
 
 .imagenesropa{
-   
     width: 100%;
-    padding: 63px 3px 10px 4px;
-    
-   
-    
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(14, 10, 50, 0.14);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
+.imagenesropa:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 24px rgba(14, 10, 50, 0.22);
+    position: relative;
+    z-index: 2;
 }
 
 .imagenesropaS{
@@ -810,7 +846,7 @@ body{
 
 .hola{
     font-size: 1.2em;
-    color: #00102E;
+    color: var(--color-navy);
 }
 
 .info__contenedor{
@@ -823,7 +859,7 @@ body{
 }
 
 .calle{
-    color: #00102E;
+    color: var(--color-navy);
     align-items: center;
     padding: 0.5em;
     margin-top: 16px;
@@ -843,7 +879,7 @@ body{
     margin-top: 20px;
 }
 .numero{
-    color: #00102E;
+    color: var(--color-navy);
     margin-top: 10px;
     align-items: center;
     padding: 0.5em;
@@ -885,12 +921,12 @@ li {
 
 a{
     text-decoration: none;
-    color: #00102E;
+    color: var(--color-navy);
     font-size: 1rem;
 }
 
 a:hover{
-    color: coral;
+    color: var(--color-coral);
 }
 
 /*header*/
@@ -922,14 +958,14 @@ header{
 }
 
 .navbar .toggle_btn {
-    color: #00102E;
+    color: var(--color-navy);
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
 
 .action_btn{
-    background-color: coral;
+    background-color: var(--color-coral);
     color: #ffffff;
     padding: 0.5rem 1rem;
     border: none;
@@ -1030,7 +1066,7 @@ header{
 .holan{
     padding: 1rem;
     font-size: 1.2em;
-    color: #00102E;
+    color: var(--color-navy);
 }
 
 .News{
@@ -1202,7 +1238,7 @@ header{
 
     .pie-pagina{
         width: 100%;
-        background-color: #0e0a32;
+        background-color: var(--color-navy-deep);
     }
     .pie-pagina .grupo-1{
         width: 100%;
@@ -1224,7 +1260,7 @@ header{
         width: 250px;
     }
     .pie-pagina .grupo-1 .box h2{
-        color: #859ac2;
+        color: var(--color-accent);
         margin-bottom: 25px;
         font-size: 20px;
     }
@@ -1307,7 +1343,7 @@ header{
     left: -9999px;
     top: 0;
     z-index: 1000;
-    background-color: #00102E;
+    background-color: var(--color-navy);
     color: #ffffff;
     padding: 0.8em 1.2em;
     border-radius: 0 0 8px 0;
@@ -1320,7 +1356,7 @@ header{
 /* Foco visible para navegación por teclado */
 a:focus-visible,
 button:focus-visible{
-    outline: 3px solid coral;
+    outline: 3px solid var(--color-coral);
     outline-offset: 2px;
 }
 
@@ -1346,4 +1382,44 @@ button:focus-visible{
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float{
+    position: fixed;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: #ffffff;
+    font-size: 1.6rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover{
+    transform: scale(1.08);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+.whatsapp-float:focus-visible{
+    outline: 3px solid var(--color-navy);
+    outline-offset: 3px;
+}
+
+@media (max-width: 500px){
+    .whatsapp-float{
+        right: 0.8rem;
+        bottom: 0.8rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
 }

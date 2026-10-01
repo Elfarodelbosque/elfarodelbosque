@@ -19,39 +19,15 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://farodelbosque.es/Novedades.html</loc>
-        <lastmod>2026-09-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://farodelbosque.es/Contacto.html</loc>
         <lastmod>2026-09-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://farodelbosque.es/Newsletter.html</loc>
-        <lastmod>2026-09-03</lastmod>
+        <loc>https://farodelbosque.es/NotasDeSandra.html</loc>
+        <lastmod>2026-09-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://farodelbosque.es/Newsletter%201.html</loc>
-        <lastmod>2026-09-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    <url>
-        <loc>https://farodelbosque.es/Newsletter%202.html</loc>
-        <lastmod>2026-09-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    <url>
-        <loc>https://farodelbosque.es/Newsletter%203.html</loc>
-        <lastmod>2026-09-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.4</priority>
     </url>
 </urlset>

@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap');
 
 :root{
     --padding-container: 100px 0;
-    --color-title: #0e0a32;
+    --color-title: #0F1D3D;
 
     /* Paleta de marca */
-    --color-navy: #00102E;
-    --color-navy-deep: #0e0a32;
+    --color-navy: #142850;
+    --color-navy-deep: #0F1D3D;
     --color-accent: #859ac2;
-    --color-coral: #ff6200;
     --color-cream: #f9f0e2;
     --color-white: #ffffff;
 
-    --font-heading: "Josefin Sans", sans-serif;
-    --font-body: "Josefin Sans", sans-serif;
+    --font-heading: "Fraunces", serif;
+    --font-body: "Inter", sans-serif;
 }
 
 body{
@@ -22,11 +21,12 @@ body{
 
     
    
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(255, 255, 255);
     background-image: url("images/fondofaro.jpg") ;
     background-size: cover;
-    background-position: center;
+    background-position: top;
+    background-repeat: no-repeat;
  
    
     
@@ -45,10 +45,13 @@ body{
 
 .hero{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 0;
     margin-bottom: 20px;
-    
-    position: relative;
+
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background-color: #ffffff;
     display: grid;
     grid-template-rows:  1fr;
     color: var(--color-navy-deep);
@@ -141,54 +144,6 @@ body{
     
 }
 
-.heroT__container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 100PX 100px 100PX 100px;
-    background-color: #eef2ff62;
-}
-
-.hero__title{
-    
-    font-size: 2.5rem;
-    padding: 40px 40px 40px 40px;
-    font-weight: 400;
-    color: var(--color-accent);
-    background-color: var(--color-navy-deep);
-    border-radius: 15px;
-    text-align: center;
-    
-    
-}
-
-.hero__title .nombre{
-    font-weight: 300;
-    color: #ffffff;
-    font-style: normal;
-}
-
-.hero__intro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2em;
-    text-align: center;
-}
-
-.hero__subtitle{
-    max-width: 40em;
-    font-size: 1.1rem;
-    color: var(--color-navy);
-    margin: 0;
-}
-
-.hero__cta{
-    font-size: 0.95rem;
-    padding: 0.7rem 1.8rem;
-}
 .heros__container{
     padding: 10px ;
     margin: 25px;
@@ -245,8 +200,6 @@ body{
 
 .videoinicio{
     width: 100%;
-    border-radius: 18px;
-    box-shadow: 0 12px 32px rgba(14, 10, 50, 0.18);
 }
 
 
@@ -279,27 +232,6 @@ body{
     
 }
 
-.imagenfondos{
-    width: 100%;
-
-}
-
-
-.imagenfondo2{
-    max-width:  30%;
-    margin: auto;
-
-    z-index: -3;
-
-
-    
-}
-
-.imagenfondos2{
-    width: 100%;
-
-}
-
 
 .subtitulos{
     font-weight: 900;
@@ -311,9 +243,10 @@ body{
 .fotosprincipal{
     width: 100%;
     padding-top: 1%;
+    padding-bottom: 3.5em;
     margin: auto;
-    
-    background-color: #ff620062;
+
+    background-color: #ffffff;
     align-content: center;
 }
 
@@ -334,158 +267,6 @@ body{
 .textonewsletter{
     
 }
-/*carrusel*/
-
-
- .fondo{
-    margin: auto;
-    
- }
-
-.carrusel{
-    margin: auto;
-    width: 17em;
-    max-width: 120em;
-    padding: 0.5em;
-
-    border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -1px -1px 6px var(--color-cream); 
-    overflow: hidden;
-    
-
-}
-.carrusel .grande{
-    display: flex;
-    width: 200%;
-    border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-content: center;
-    padding: 0.7em;
-    padding-right: 31px;
-    margin-left: 10px;
-    transition: all .5s ease;
-
-    transform: translateX(0%);
-}
-.carrusel .img{
-    width: calc(100%/ 2 - 2em);
-    min-height: 10vh;
-    border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-    
-
-}
-.carrusel .puntos{
-    width: 100%;
-    padding: .4em;
-    margin: 1em 0 0;
-    
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.carrusel .punto{
-    width: 2em;
-    height: 2em;
-    margin: 1em 1em 0;
-    padding: 1em;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-}
-
-.carrusel .punto.activo{
-    background-color: var(--color-navy);
-}
-
-.beis{
-    width: max-content;
-    height: 30px;
-    background-color: rgb(255, 255, 255);
-    z-index: -1;
-    opacity: 0;
-}
-
-
-
-
-.fondo2{
-    margin: auto;
-    
- }
-
-.carrusel2{
-    margin: auto;
-    width: 17em;
-    max-width: 120em;
-    padding: 0.5em;
-
-    border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -1px -1px 6px var(--color-cream); 
-    overflow: hidden;
-    
-
-}
-.carrusel2 .grande2{
-    display: flex;
-    width: 200%;
-    border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-content: center;
-    padding: 0.7em;
-    padding-right: 31px;
-    margin-left: 10px;
-    transition: all .5s ease;
-
-    transform: translateX(0%);
-}
-.carrusel2 .img2{
-    width: calc(100%/ 2 - 2em);
-    min-height: 10vh;
-    border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-    
-
-}
-.carrusel2 .puntos2{
-    width: 100%;
-    padding: .4em;
-    margin: 1em 0 0;
-    
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.carrusel2 .punto2{
-    width: 2em;
-    height: 2em;
-    margin: 1em 1em 0;
-    padding: 1em;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-}
-
-.carrusel2 .punto2.activo2{
-    background-color: var(--color-navy);
-}
-
 .beis{
     width: max-content;
     height: 30px;
@@ -797,16 +578,7 @@ body{
     aspect-ratio: 3 / 4;
     object-fit: cover;
     display: block;
-    border-radius: 14px;
     box-shadow: 0 4px 14px rgba(14, 10, 50, 0.14);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.imagenesropa:hover{
-    transform: scale(1.03);
-    box-shadow: 0 10px 24px rgba(14, 10, 50, 0.22);
-    position: relative;
-    z-index: 2;
 }
 
 .imagenesropaS{
@@ -821,33 +593,6 @@ body{
 
 
 /*contacto*/
-
-.contactocontainer{
-    margin-top: 2em;
-    width: 99%;
-    display: flex;
-    gap: 1em;
-    margin-left: 6px;
-    justify-content: center;
-    align-items: center;
-
-
-    
-}
-.fotocontacto{
-    width: 100%;
-}
-
-.textocontacto{
-    flex: 1 1 320px;
-    min-width: 260px;
-    max-width: 560px;
-}
-
-.hola{
-    font-size: 1.2em;
-    color: var(--color-navy);
-}
 
 .info__contenedor{
     width: 99%;
@@ -866,7 +611,7 @@ body{
     background-color: rgba(255, 255, 255, 0.9);
     background-position: center;
 
-    border-radius: 15px;
+    border-radius: 0;
 
 }
 
@@ -886,7 +631,21 @@ body{
     background-color: rgba(255, 255, 255, 0.9);
     background-position: center;
 
-    border-radius: 15px;
+    border-radius: 0;
+}
+
+/* Nuestra Historia: relato de Sandra, mismo patrón que Notas de Sandra
+   (columna a la izquierda, sin centrar). */
+.historia-cuerpo{
+    max-width: 900px;
+    margin: 2.2em 0 0;
+    padding: 0 5%;
+}
+
+.historia-cuerpo p{
+    color: var(--color-navy);
+    line-height: 1.75;
+    margin: 0 0 1.2em;
 }
 
 .rebaja{
@@ -906,12 +665,17 @@ body{
 
 .imagenesreb{
     width: 94%;
-  
+    max-width: 1400px;
+    margin: 2.5em auto 0;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
     gap: 4em;
-    margin: auto;
+}
 
+@media (min-width: 993px){
+    .imagenesreb{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 
@@ -926,7 +690,7 @@ a{
 }
 
 a:hover{
-    color: var(--color-coral);
+    color: var(--color-navy-deep);
 }
 
 /*header*/
@@ -939,17 +703,25 @@ header{
 .navbar{
     width: 100%;
     height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .navbar .logo a {
+    font-family: var(--font-heading);
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
 
+}
+
+/* Titulares: la serif de marca en todos los encabezados y títulos de sección */
+h1, h2, h3,
+.holan,
+.nota__titulo,
+.heros__title,
+.heross__title{
+    font-family: var(--font-heading);
 }
 
 .navbar .links {
@@ -965,13 +737,14 @@ header{
 }
 
 .action_btn{
-    background-color: var(--color-coral);
+    background-color: var(--color-navy);
     color: #ffffff;
-    padding: 0.5rem 1rem;
+    padding: 0.9rem 2.2rem;
     border: none;
     outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    border-radius: 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
     font-weight: bold;
     cursor: pointer;
     transition: scale 0.2 ease;
@@ -986,45 +759,114 @@ header{
     scale: 0.95;
 }
 
-.contenedor {
-	width: 90%;
-	max-width: 1200px;
-	margin: auto;
-	padding: 40px 0;
-
-	
+/* Notas de Sandra: lista de notas estilo app de notas del móvil.
+   <details>/<summary> nativos: accesibles y sin JS, se abren al pulsar. */
+.notas-header{
+    max-width: 900px;
+    margin: 0;
+    padding: 2.8em 5% 0.6em;
+    text-align: left;
 }
 
-.titulo {
-	font-size: 24px;
-	padding: 20px 0;
+.notas-header h1{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.6em;
 }
 
-.contenedor-conciertos {
+.notas-header p{
+    color: var(--color-navy);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.notas-lista{
+    max-width: 900px;
+    margin: 1.5em 0 5em;
+    padding: 0 5%;
+}
+
+.nota{
+    border-top: 1px solid #dfe2e8;
+}
+
+.nota:last-child{
+    border-bottom: 1px solid #dfe2e8;
+}
+
+.nota__resumen{
+    list-style: none;
     display: flex;
-     flex-wrap: wrap;
-     gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2em;
+    padding: 1.5em 0.1em;
+    cursor: pointer;
 }
 
-.card {
-	border-radius: 10px;
-	min-height: 200px;
-	font-weight: bold;
-	padding: 20px;
-	position: relative;
-	overflow: hidden;
-	background-size: cover;
-	background-position: center center;
-    width: 300px;
-
-	
+.nota__resumen::-webkit-details-marker{
+    display: none;
 }
 
-.card .textos {
-	height: 100%;
-    color: #ffffff;
-	
-	
+.nota__meta{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.nota__eyebrow{
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.nota__titulo{
+    font-size: 1.08rem;
+    color: var(--color-navy-deep);
+    font-weight: 400;
+}
+
+.nota__icono{
+    flex: 0 0 auto;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-navy-deep);
+    color: var(--color-navy-deep);
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.nota[open] .nota__icono{
+    transform: rotate(45deg);
+}
+
+.nota__cuerpo{
+    padding: 0 0.1em 2em;
+    max-width: 75ch;
+}
+
+.nota__cuerpo p{
+    color: var(--color-navy);
+    line-height: 1.75;
+    margin: 0 0 1.1em;
+}
+
+.nota__firma{
+    color: var(--color-navy-deep);
+    font-style: italic;
+}
+
+@media (max-width: 600px){
+    .nota__titulo{
+        font-size: 1rem;
+    }
 }
 
 /* menu*/
@@ -1203,22 +1045,6 @@ header{
     
     }
 
-    .heroT__container{
-        padding: 0px 0px 0px 0px;
-        margin: auto;
-        
-
-    
-    }
-
-    .hero__title{
-        font-size: 1rem;
-        padding: 20px 20px 20px 20px;
-    }
-
-
-
-
     .nav__title{
         font-size: 10px;
         width: 80%;
@@ -1242,7 +1068,7 @@ header{
     }
     .pie-pagina .grupo-1{
         width: 100%;
-        max-width: 1200px;
+        max-width: 800px;
         margin: auto;
         display:grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1268,6 +1094,12 @@ header{
         color: #efefef;
         margin-bottom: 10px;
     }
+    .pie-pagina .grupo-1 .box p a{
+        color: #efefef;
+    }
+    .pie-pagina .grupo-1 .box p a:hover{
+        color: var(--color-accent);
+    }
     .pie-pagina .grupo-1 .red-social a{
      
         
@@ -1286,7 +1118,7 @@ header{
     }
    
     .pie-pagina .grupo-2{
-        background-color: #ff6200;
+        background-color: var(--color-navy);
         padding: 15px 10px;
         text-align: center;
         color: #fff;
@@ -1301,19 +1133,9 @@ header{
             grid-gap:30px;
             padding: 35px 0px;
         }
-    }
-
-    .grande{
-        padding-right: 31px;
-    }
-
-    .imagenfondo2{
-        max-width:  90%;
-    }
-
-
-    .grande2{
-        padding-right: 31px;
+        .pie-pagina .grupo-1 .box p{
+            padding-right: 4.5rem;
+        }
     }
 
     .imagenes{
@@ -1356,7 +1178,7 @@ header{
 /* Foco visible para navegación por teclado */
 a:focus-visible,
 button:focus-visible{
-    outline: 3px solid var(--color-coral);
+    outline: 3px solid var(--color-navy-deep);
     outline-offset: 2px;
 }
 
@@ -1421,5 +1243,126 @@ button:focus-visible{
         width: 50px;
         height: 50px;
         font-size: 1.4rem;
+    }
+}
+
+/* LookBook campaña OI 26-27: mosaico reproducido tal cual el boceto de la
+   campaña (2 columnas en ordenador, cada foto en la columna exacta e igual
+   orden que el boceto). Cada figura trae su "grid-column" ya fijado en el
+   HTML (1 ó 2); en móvil se anula ese valor y todo cae en una sola columna,
+   en el mismo orden en que aparecen en el HTML (de arriba a abajo, tal como
+   se leería el boceto original). */
+/* Dos columnas independientes (flex), cada una apilando sus propias fotos
+   sin depender de la altura de la otra: así no quedan huecos blancos entre
+   fotos de distinta altura, igual que en tu boceto. */
+.imagenes-campana{
+    width: 94%;
+    margin: 2.5em auto 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5em;
+}
+
+.imagenes-campana .look-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.imagenes-campana .look-item{
+    margin: 0;
+}
+
+.imagen-mosaico{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 992px){
+    .imagenes-campana{
+        flex-direction: column;
+        width: 90%;
+    }
+    .imagenes-campana .look-col{
+        display: contents;
+    }
+}
+
+/* Carrusel de portada: cinta de fotos de la campaña desplazándose en bucle
+   continuo. Se duplica la lista de imágenes una vez para que el bucle sea
+   perfecto; con "prefers-reduced-motion" o al pasar el ratón, se detiene. */
+.carrusel-campana{
+    width: 100%;
+    overflow: hidden;
+    padding: 0.6em 0 2.5em;
+    background-color: #ffffff;
+}
+
+.carrusel-campana__enlace{
+    display: block;
+}
+
+.carrusel-track{
+    display: flex;
+    align-items: stretch;
+    width: max-content;
+    gap: 0.4em;
+    padding-left: 0.4em;
+    animation: carrusel-desplazar 100s linear infinite;
+}
+
+/* Cada "columna" reproduce tal cual una columna del collage que diseñaste:
+   dos fotos apiladas, con la altura de cada una en la misma proporción que
+   en tu boceto (fijada foto a foto en el HTML). El ancho de cada columna no
+   es fijo: se calcula con "aspect-ratio" a partir de las proporciones
+   reales de tus fotos originales (fijado en línea en el HTML), para que
+   cada columna respete su forma tal y como la dibujaste en el boceto y no
+   se recorten cabezas ni cuerpos de más. */
+.carrusel-col{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    height: 860px;
+    width: auto;
+    flex: none;
+}
+
+.carrusel-col img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 22%;
+    box-shadow: 0 4px 14px rgba(14, 10, 50, 0.14);
+}
+
+.carrusel-campana:hover .carrusel-track{
+    animation-play-state: paused;
+}
+
+@keyframes carrusel-desplazar{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+}
+
+.carrusel-campana__cta{
+    text-align: center;
+    margin: 2.5em 0 0;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .carrusel-track{
+        animation: none;
+    }
+}
+
+@media (max-width: 768px){
+    .carrusel-col{
+        height: 480px;
+    }
+    .carrusel-track{
+        animation-duration: 57s;
     }
 }

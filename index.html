@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Faro del Bosque | Tienda de ropa de mujer en Madrid</title>
-    <link rel="shortcut icon" href="./images/farologoblanco.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="./images/farologoblanco.png" type="image/png">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <meta name="theme-color" content="#00102E">
-    <meta name="description" content="Tienda de ropa de mujer El Faro del Bosque, en calle Mesena 106, Madrid (Arturo Soria). Descubre nuestro LookBook, catálogo y novedades.">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Tienda de ropa de mujer El Faro del Bosque, en calle Mesena 106, Madrid (Arturo Soria). Descubre nuestro LookBook y nuestro catálogo.">
     <link rel="canonical" href="https://farodelbosque.es/">
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://farodelbosque.es/" />
     <meta property="og:title" content="El Faro del Bosque | Tienda de ropa de mujer en Madrid" />
-    <meta property="og:description" content="Tienda de ropa de mujer El Faro del Bosque, en calle Mesena 106, Madrid (Arturo Soria). Descubre nuestro LookBook, catálogo y novedades." />
-    <meta property="og:image" content="https://farodelbosque.es/images/logo.jpg" />
+    <meta property="og:description" content="Tienda de ropa de mujer El Faro del Bosque, en calle Mesena 106, Madrid (Arturo Soria). Descubre nuestro LookBook y nuestro catálogo." />
+    <meta property="og:image" content="https://farodelbosque.es/images/oi26-hero-inicio-poster.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://farodelbosque.es/" />
     <meta name="twitter:title" content="El Faro del Bosque | Tienda de ropa de mujer en Madrid" />
-    <meta name="twitter:description" content="Tienda de ropa de mujer El Faro del Bosque, en calle Mesena 106, Madrid (Arturo Soria). Descubre nuestro LookBook, catálogo y novedades." />
-    <meta name="twitter:image" content="https://farodelbosque.es/images/logo.jpg" />
+    <meta name="twitter:description" content="Tienda de ropa de mujer El Faro del Bosque, en calle Mesena 106, Madrid (Arturo Soria). Descubre nuestro LookBook y nuestro catálogo." />
+    <meta name="twitter:image" content="https://farodelbosque.es/images/oi26-hero-inicio-poster.jpg" />
 
     <script type="application/ld+json">
     {
@@ -34,6 +35,26 @@
         "url": "https://farodelbosque.es/",
         "telephone": "+34622330478",
         "priceRange": "€€",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "11:30",
+                "closes": "14:30"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "17:30",
+                "closes": "20:30"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "11:30",
+                "closes": "14:30"
+            }
+        ],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Calle Mesena, 106",
@@ -50,10 +71,6 @@
 <body>
     <a class="skip-link" href="#main">Saltar al contenido</a>
 
-    
-
-    
-
     <header class="hero">
         <div class="navbar">
             <div class="logo"><a href="index.html">El Faro del Bosque</a></div>
@@ -66,20 +83,19 @@
                     
                 </li>
                 <li class="nav__items">
-                    <a href="Catalogo.html" class="nav__links">CatáLogo</a>
+                    <a href="Catalogo.html" class="nav__links">Catálogo</a>
                 </li>
                 <li class="nav__items">
                     <a href="Contacto.html" class="nav__links">Nuestra Historia</a>
                 </li>
-    
+                <li class="nav__items">
+                    <a href="index.html#visitanos" class="nav__links">Visítanos</a>
+                </li>
             </ul>
             <a href="NotasDeSandra.html" class="action_btn">Notas de Sandra</a>
-            <button type="button" class="toggle_btn" id="menuToggle" aria-expanded="false" aria-controls="dropdownMenu" aria-label="Abrir menú"><i class="fa-solid fa-barcode" aria-hidden="true"></i></button>
-        
-    
-    
+            <button type="button" class="toggle_btn" id="menuToggle" aria-expanded="false" aria-controls="dropdownMenu" aria-label="Abrir menú"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
         </div>
-    
+
         <ul class="dropdown_menu" id="dropdownMenu">
             <li class="nav__items">
                 <a href="index.html" class="nav__links">Inicio</a>
@@ -89,10 +105,13 @@
                 
             </li>
             <li class="nav__items">
-                <a href="Catalogo.html" class="nav__links">CatáLogo</a>
+                <a href="Catalogo.html" class="nav__links">Catálogo</a>
             </li>
             <li class="nav__items">
                 <a href="Contacto.html" class="nav__links">Nuestra Historia</a>
+            </li>
+            <li class="nav__items">
+                <a href="index.html#visitanos" class="nav__links">Visítanos</a>
             </li>
             <li class="nav__items"> <a href="NotasDeSandra.html" class="action_btn">Notas de Sandra</a></li>
         </ul>
@@ -102,7 +121,7 @@
     <main id="main">
         <section class="hero__container container">
            
-            <video class="videoinicio" autoplay muted loop playsinline poster="images/oi26-hero-inicio-poster.jpg" aria-label="El Faro del Bosque presenta la colección Otoño-Invierno">
+            <video class="videoinicio" autoplay muted loop playsinline poster="images/oi26-hero-inicio-poster.jpg" data-poster-movil="images/oi26-hero-inicio-movil-poster.jpg" aria-label="El Faro del Bosque presenta la colección Otoño-Invierno">
                 <source media="(max-width: 768px)" src="images/oi26-hero-inicio-movil.mp4" type="video/mp4">
                 <source src="images/oi26-hero-inicio.mp4" type="video/mp4">
             </video>
@@ -110,7 +129,7 @@
             
         </section>
         <section class="carrusel-campana" aria-label="Nueva colección Otoño-Invierno 2026-27">
-          <a href="LookBook.html" class="carrusel-campana__enlace" aria-label="Ver el LookBook completo de la temporada">
+          <a href="LookBook.html" class="carrusel-campana__enlace" tabindex="-1" aria-hidden="true">
             <div class="carrusel-track">
                 <div class="carrusel-col" style="aspect-ratio:0.437">
                     <img src="images/oi26-carrusel-01.jpg" alt="Campaña Otoño-Invierno 2026-27" loading="eager" style="height:54.5%">
@@ -154,64 +173,87 @@
                 </div>
                 <!-- Set duplicado (oculto para lectores de pantalla): bucle continuo -->
                 <div class="carrusel-col" style="aspect-ratio:0.437">
-                    <img src="images/oi26-carrusel-01.jpg"  aria-hidden="true" loading="lazy" style="height:54.5%">
-                    <img src="images/oi26-carrusel-02.jpg"  aria-hidden="true" loading="lazy" style="height:45.5%">
+                    <img src="images/oi26-carrusel-01.jpg" alt="" aria-hidden="true" loading="lazy" style="height:54.5%">
+                    <img src="images/oi26-carrusel-02.jpg" alt="" aria-hidden="true" loading="lazy" style="height:45.5%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.517">
-                    <img src="images/oi26-carrusel-03.jpg"  aria-hidden="true" loading="lazy" style="height:36.05%">
-                    <img src="images/oi26-carrusel-04.jpg"  aria-hidden="true" loading="lazy" style="height:63.95%">
+                    <img src="images/oi26-carrusel-03.jpg" alt="" aria-hidden="true" loading="lazy" style="height:36.05%">
+                    <img src="images/oi26-carrusel-04.jpg" alt="" aria-hidden="true" loading="lazy" style="height:63.95%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.535">
-                    <img src="images/oi26-carrusel-05.jpg"  aria-hidden="true" loading="lazy" style="height:33.79%">
-                    <img src="images/oi26-carrusel-06.jpg"  aria-hidden="true" loading="lazy" style="height:66.21%">
+                    <img src="images/oi26-carrusel-05.jpg" alt="" aria-hidden="true" loading="lazy" style="height:33.79%">
+                    <img src="images/oi26-carrusel-06.jpg" alt="" aria-hidden="true" loading="lazy" style="height:66.21%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.430">
-                    <img src="images/oi26-carrusel-07.jpg"  aria-hidden="true" loading="lazy" style="height:46.53%">
-                    <img src="images/oi26-carrusel-08.jpg"  aria-hidden="true" loading="lazy" style="height:53.47%">
+                    <img src="images/oi26-carrusel-07.jpg" alt="" aria-hidden="true" loading="lazy" style="height:46.53%">
+                    <img src="images/oi26-carrusel-08.jpg" alt="" aria-hidden="true" loading="lazy" style="height:53.47%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.520">
-                    <img src="images/oi26-carrusel-09.jpg"  aria-hidden="true" loading="lazy" style="height:35.71%">
-                    <img src="images/oi26-carrusel-10.jpg"  aria-hidden="true" loading="lazy" style="height:64.29%">
+                    <img src="images/oi26-carrusel-09.jpg" alt="" aria-hidden="true" loading="lazy" style="height:35.71%">
+                    <img src="images/oi26-carrusel-10.jpg" alt="" aria-hidden="true" loading="lazy" style="height:64.29%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.426">
-                    <img src="images/oi26-carrusel-11.jpg"  aria-hidden="true" loading="lazy" style="height:49.78%">
-                    <img src="images/oi26-carrusel-12.jpg"  aria-hidden="true" loading="lazy" style="height:50.22%">
+                    <img src="images/oi26-carrusel-11.jpg" alt="" aria-hidden="true" loading="lazy" style="height:49.78%">
+                    <img src="images/oi26-carrusel-12.jpg" alt="" aria-hidden="true" loading="lazy" style="height:50.22%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.440">
-                    <img src="images/oi26-carrusel-13.jpg"  aria-hidden="true" loading="lazy" style="height:54.28%">
-                    <img src="images/oi26-carrusel-14.jpg"  aria-hidden="true" loading="lazy" style="height:45.72%">
+                    <img src="images/oi26-carrusel-13.jpg" alt="" aria-hidden="true" loading="lazy" style="height:54.28%">
+                    <img src="images/oi26-carrusel-14.jpg" alt="" aria-hidden="true" loading="lazy" style="height:45.72%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.508">
-                    <img src="images/oi26-carrusel-15.jpg"  aria-hidden="true" loading="lazy" style="height:36.97%">
-                    <img src="images/oi26-carrusel-16.jpg"  aria-hidden="true" loading="lazy" style="height:63.03%">
+                    <img src="images/oi26-carrusel-15.jpg" alt="" aria-hidden="true" loading="lazy" style="height:36.97%">
+                    <img src="images/oi26-carrusel-16.jpg" alt="" aria-hidden="true" loading="lazy" style="height:63.03%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.456">
-                    <img src="images/oi26-carrusel-17.jpg"  aria-hidden="true" loading="lazy" style="height:50.79%">
-                    <img src="images/oi26-carrusel-18.jpg"  aria-hidden="true" loading="lazy" style="height:49.21%">
+                    <img src="images/oi26-carrusel-17.jpg" alt="" aria-hidden="true" loading="lazy" style="height:50.79%">
+                    <img src="images/oi26-carrusel-18.jpg" alt="" aria-hidden="true" loading="lazy" style="height:49.21%">
                 </div>
                 <div class="carrusel-col" style="aspect-ratio:0.447">
-                    <img src="images/oi26-carrusel-19.jpg"  aria-hidden="true" loading="lazy" style="height:51.02%">
-                    <img src="images/oi26-carrusel-20.jpg"  aria-hidden="true" loading="lazy" style="height:48.98%">
+                    <img src="images/oi26-carrusel-19.jpg" alt="" aria-hidden="true" loading="lazy" style="height:51.02%">
+                    <img src="images/oi26-carrusel-20.jpg" alt="" aria-hidden="true" loading="lazy" style="height:48.98%">
                 </div>
             </div>
           </a>
           <p class="carrusel-campana__cta"><a href="LookBook.html" class="action_btn">Ver el LookBook completo</a></p>
         </section>
 
-        <div class="beis" aria-hidden="true"></div>
-        <div>
-        <section class="hero__container">
-           
-           
-        </section>
         <section class="fotosprincipal">
-           <a href="Catalogo.html" aria-label="Ver el catálogo completo">
-               <video class="Catalogo" autoplay muted loop playsinline poster="images/oi26-catalogo-inicio-poster.jpg">
+           <a href="Catalogo.html" tabindex="-1" aria-hidden="true">
+               <video class="Catalogo" autoplay muted loop playsinline poster="images/oi26-catalogo-inicio-poster.jpg" aria-hidden="true">
                    <source src="images/oi26-catalogo-inicio.mp4" type="video/mp4">
                </video>
            </a>
            <p class="carrusel-campana__cta"><a href="Catalogo.html" class="action_btn">Ver catálogo completo</a></p>
-        </section></div>
+        </section>
+
+        <section class="visitanos" id="visitanos" aria-labelledby="visitanos-titulo">
+            <div class="visitanos__interior">
+                <div>
+                    <h2 id="visitanos-titulo">Visítanos</h2>
+                    <p class="visitanos__texto">Te esperamos en la tienda, en el barrio de Arturo Soria.</p>
+                    <address>
+                        Calle Mesena, 106<br>
+                        28033 Madrid
+                    </address>
+                    <dl class="visitanos__horario">
+                        <div>
+                            <dt>Lunes a viernes</dt>
+                            <dd>11:30–14:30 y 17:30–20:30</dd>
+                        </div>
+                        <div>
+                            <dt>Sábados</dt>
+                            <dd>11:30–14:30</dd>
+                        </div>
+                    </dl>
+                    <div class="visitanos__acciones">
+                        <a class="boton boton--principal" href="tel:+34622330478"><i class="fa-solid fa-phone" aria-hidden="true"></i>Llamar · 622 33 04 78</a>
+                        <a class="boton" href="https://wa.me/34622330478?text=Hola%2C%20me%20gustar%C3%ADa%20apuntarme%20a%20novedades%20y%20promociones%20de%20El%20Faro%20del%20Bosque" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</a>
+                        <a class="boton" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Mesena+106%2C+28033+Madrid" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Cómo llegar</a>
+                    </div>
+                </div>
+                <iframe class="visitanos__mapa" src="https://www.google.com/maps?q=Calle+Mesena+106,+28033+Madrid&amp;output=embed" title="Mapa: El Faro del Bosque, Calle Mesena 106, Madrid" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
 
     </main>
 
@@ -225,45 +267,29 @@
                 </figure>
             </div>
             <div class="box">
-                <h2>Faro del Bosque</h2>
-                <p>Tienda de ropa</p>
-                <p>c/ Mesena 106</p>
-                <p>28033</p>
-                <p>Madrid</p>
-                <p><a href="tel:+34622330478">622 33 04 78</a></p>
+                <h2>El Faro del Bosque</h2>
+                <address>
+                    <p>Tienda de ropa</p>
+                    <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Mesena+106%2C+28033+Madrid" target="_blank" rel="noopener">c/ Mesena 106, 28033 Madrid</a></p>
+                    <p><a href="tel:+34622330478">622 33 04 78</a></p>
+                </address>
             </div>
             
             <div class="box">
-                <h2>SIGUENOS</h2>
+                <h2 class="pie-mayusculas">Síguenos</h2>
                 <div class="red-social">
-                    <a href="https://www.instagram.com/elfarodelbosque_/" aria-label="El Faro del Bosque en Instagram" target="_blank" rel="noopener"><img src="images/Instagram_icon.png.webp" alt="" loading="lazy"></a>
+                    <a href="https://www.instagram.com/elfarodelbosque_/" aria-label="El Faro del Bosque en Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                     
                 </div>
             </div>
         </div>
         <div class="grupo-2">
-            <small>&copy; 2026 <b>Faro del Bosque</b> - Todos los Derechos Reservados.</small>
+            <small>&copy; 2026 <b>El Faro del Bosque</b> · Todos los derechos reservados.</small>
         </div>
     </footer>
  
 
-    <script>
-        const togglebtn = document.querySelector('.toggle_btn')
-        const togglebtnIcon = document.querySelector('.toggle_btn i')
-        const dropdownmenu = document.querySelector('.dropdown_menu')
-
-        togglebtn.onclick = function () {
-            dropdownmenu.classList.toggle('open')
-            const isOpen = dropdownmenu.classList.contains('open')
-
-            togglebtn.setAttribute('aria-expanded', isOpen)
-
-            togglebtnIcon.classList = isOpen
-               ? 'fa-solid fa-xmark'
-               : 'fa-solid fa-barcode'
-        }
-    
-    </script>
+    <script src="js/sitio.js" defer></script>
 
     <a href="https://wa.me/34622330478?text=Hola%2C%20me%20gustar%C3%ADa%20apuntarme%20a%20novedades%20y%20promociones%20de%20El%20Faro%20del%20Bosque" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp para recibir novedades y promociones"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
 
 :root{
     --padding-container: 100px 0;
@@ -11,37 +11,26 @@
     --color-cream: #f9f0e2;
     --color-white: #ffffff;
 
-    --font-heading: "Fraunces", serif;
-    --font-body: "Inter", sans-serif;
+    --font-heading: "Newsreader", serif;
+    --font-body: "Atkinson Hyperlegible Next", sans-serif;
 }
 
 body{
     font-family: var(--font-body);
+    line-height: 1.5;
     background-color: #ffffff;
-
-    
-   
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
-    background-image: url("images/fondofaro.jpg") ;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
- 
-   
-    
+}
+
+::selection{
+    background-color: var(--color-navy);
+    color: #ffffff;
 }
 
 .container{
-    
     min-width: 90px;
     margin:  auto;
-    gap: 10rem;
-
-
 }
-
-
 
 .hero{
     width: 100%;
@@ -58,7 +47,6 @@ body{
 
 }
 
-
 .hero::before{
     content: "";
     position: absolute;
@@ -74,36 +62,9 @@ body{
 
 /* Nav */
 
-.nav{
-    --padding-container:0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-   
-
-}
-
-.nav__title{
-    font-weight: 300;
-}
-
-.nav__link{
-    margin-left: auto;
-    padding: 0;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 2em;
-    color: var(--color-navy);
-    text-decoration: none;
-   
-    
-}
-
 .nav__items{
     list-style: none;
 }
-
 
 .nav__links{
     color: var(--color-navy);
@@ -112,21 +73,12 @@ body{
 
 }
 
-.nav__menu{
-    margin-left: auto;
-    cursor: pointer;
-    display: none;
+/* Página actual marcada en el menú */
+.nav__links[aria-current="page"]{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
 }
-
-.nav__img{
-    display: block;
-    width: 30px;
-}
-
-.nav__close{
-    display: var(--show, none) ;
-}
-
 
 /* Hero container */
 
@@ -136,108 +88,37 @@ body{
     
    
 
-
     
 
     
    
     
 }
-
-.heros__container{
-    padding: 10px ;
-    margin: 25px;
-    max-width: 100%;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    margin: auto;
-    --padding-container:0;
-    display: grid;
-    grid-auto-rows: max-content;
-    align-content: center;
-    gap: 2em;
-    text-align: center;
-}
-
-.heros__title{
-    font-size: 2rem;
-    
-    
-}
-
 
   
 
-.heross__container{
-    padding: 10px ;
-    margin: 25px;
-    width: 41%;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    margin: auto;
-    --padding-container:0;
-    display: grid;
-    grid-auto-rows: max-content;
-    align-content: center;
-    gap: 2em;
-    text-align: center;
-}
-
-.candado{
-    width: 30%;
- 
-    margin: 50px;
-    margin-bottom: 100px;
-    max-width: 80%;
-    margin: auto;
-    display: grid;
-    grid-auto-rows: max-content;
-    align-content: center;
-
-
-
-}
-
+/* Vídeos de portada: el hueco se reserva desde el principio con la
+   proporción del vídeo, así la página no salta cuando empieza a reproducirse.
+   En el móvil los dos vídeos van en vertical, a la misma proporción. */
 .videoinicio{
     width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
-
-.heross__title{
-    font-size: 2rem;
-    
-    
-}
-
-.herosss__container{
-    padding: 0px ;
-    margin: auto;
-    max-width: 100%;
-    
-    
-   
-   
-   
-   
-}
-
-.imagenfondo{
-    max-width:  90%;
-    margin: auto;
-    
-
-    z-index: -3;
-
-
-    
-}
-
-
-.subtitulos{
-    font-weight: 900;
-    font-size: 180px;
-    line-height: 135px;
-    letter-spacing: -30px;
+@media (max-width: 768px){
+    .videoinicio{
+        aspect-ratio: 9 / 16;
+    }
+    /* Catálogo también en vertical. Los percheros entran por la derecha y se
+       paran entre el 28% y el 69% del ancho del plano: un 3:4 centrado ahí
+       los deja enteros mientras están quietos (un 9:16 los cortaría). */
+    .Catalogo{
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: 47% center;
+    }
 }
 
 .fotosprincipal{
@@ -251,22 +132,17 @@ body{
 }
 
 .LookBook,
-.Catalogo,
-.NEWS{
+.Catalogo{
     width: 100%;
     display: block;
     transition: opacity 0.25s ease;
 }
 
 .fotosprincipal a:hover .LookBook,
-.fotosprincipal a:hover .Catalogo,
-.fotosprincipal a:hover .NEWS{
+.fotosprincipal a:hover .Catalogo{
     opacity: 0.92;
 }
 
-.textonewsletter{
-    
-}
 .beis{
     width: max-content;
     height: 30px;
@@ -275,303 +151,7 @@ body{
     opacity: 0;
 }
 
-
 /*rebajas*/
-
-.rebejas{
-    gap: 1em;
-}
-
-.imagenesrebs{
-    width: 94%;
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
-    gap: 2em;
-    margin: auto;
-
-}
-
-
-.imagenesreb__cont{
-    display: grid;
-    grid-template-columns: 40px 1fr 40px;
-    gap: 1em;
-    align-items: center;
-}
-
-.imagenesreb__leftarrow{
-    width: 70%;
-    grid-column: 1/2;
-    grid-row: 2/3; 
-    margin: auto; 
-    
-    border-radius: 50%;
-    padding-left: 1px;
-    
-}
-
-.imagenesreb__arrow{
-    width: 70%;
-    grid-column: 3/4;
-    grid-row: 2/3;
-    margin: auto;
-    
-    border-radius: 50%;
-    padding-left: 1px;
-
-}
-
-.imagenesreb__body{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body1{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show1{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body2{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show2{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body3{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show3{
-    pointer-events: unset;
-    opacity: 1;
-   
-
-}
-
-.imagenesreb__body4{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show4{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-.imagenesreb__body5{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show5{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body6{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show6{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body7{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show7{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body8{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show8{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-.imagenesreb__body9{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show9{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body10{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show10{
-    pointer-events: unset;
-    opacity: 1;
-   
-
-}
-
-.imagenesreb__body11{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show11{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body12{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show12{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body13{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show13{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body14{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show14{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body15{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show15{
-    pointer-events: unset;
-    opacity: 1;
-    
-
-}
-
-.imagenesreb__body16{
-    grid-column: 1/4;
-    grid-row: 1/4;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.imagenesreb__body--show16{
-    pointer-events: unset;
-    opacity: 1;
-   
-
-}
-
-.imagenlook{
-    width: 94%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5em;
-}
-
-
-
-
-
-
-
-
 
 .imagenesropa{
     width: 100%;
@@ -580,17 +160,6 @@ body{
     display: block;
     box-shadow: 0 4px 14px rgba(14, 10, 50, 0.14);
 }
-
-.imagenesropaS{
-   
-    width: 100%;
-    padding: 1px 3px 1px 3px;
-    
-   
-    
-
-}
-
 
 /*contacto*/
 
@@ -678,7 +247,6 @@ body{
     }
 }
 
-
 li {
     list-style: none;
 }
@@ -718,9 +286,7 @@ header{
 /* Titulares: la serif de marca en todos los encabezados y títulos de sección */
 h1, h2, h3,
 .holan,
-.nota__titulo,
-.heros__title,
-.heross__title{
+.nota__titulo{
     font-family: var(--font-heading);
 }
 
@@ -734,29 +300,30 @@ h1, h2, h3,
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
+    width: 48px;
+    height: 48px;
+    margin-right: -12px;
+    align-items: center;
+    justify-content: center;
 }
 
 .action_btn{
+    display: inline-block;
     background-color: var(--color-navy);
     color: #ffffff;
     padding: 0.9rem 2.2rem;
     border: none;
-    outline: none;
     border-radius: 0;
-    font-size: 0.85rem;
-    letter-spacing: 0.03em;
-    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    font-weight: 600;
     cursor: pointer;
-    transition: scale 0.2 ease;
+    transition: background-color 0.2s ease;
 }
 
 .action_btn:hover{
-    scale: 1.05;
+    background-color: var(--color-navy-deep);
     color: #ffffff;
-}
-
-.action_btn:active{
-    scale: 0.95;
 }
 
 /* Notas de Sandra: lista de notas estilo app de notas del móvil.
@@ -869,41 +436,58 @@ h1, h2, h3,
     }
 }
 
-/* menu*/
+/* menu: panel opaco que aparece con un fundido corto. Cerrado queda oculto
+   también para el teclado y los lectores de pantalla (visibility). */
 .dropdown_menu {
     display: none;
     position: absolute;
     right: 2rem;
     top: 60px;
-    height: 0;
     width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.imagenlook--show {
-    display: none;
-    
+    padding: 0.4rem 0 0.8rem;
+    background-color: #ffffff;
+    box-shadow: 0 14px 32px rgba(15, 29, 61, 0.16);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition:
+        opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+        visibility 0s linear 0.22s;
 }
 
 .dropdown_menu.open {
-    height: 260px;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition-delay: 0s;
 }
 
 .dropdown_menu li {
-    padding: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.dropdown_menu .nav__links{
+    width: 100%;
+    padding: 0.9rem 1rem;
+    text-align: center;
+    font-size: 1.05rem;
 }
 
 .dropdown_menu .action_btn {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 0.4rem 1rem 0;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .dropdown_menu{
+        transition: none;
+        transform: none;
+    }
 }
 .holan{
     padding: 1rem;
@@ -917,45 +501,23 @@ h1, h2, h3,
     text-align: justify;
 }
 
-.cata{
-    
-    
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-}
-
 /*responsive*/
 
-@media (max-width: 992px) {
+@media (max-width: 1180px) {
     .navbar .links,
     .navbar .action_btn {
         display: none;
     }
-    
 
 
     .navbar .toggle_btn {
-        display: block;
+        display: inline-flex;
 }
 
     .dropdown_menu{
     display: block;
 }
 
-.imagenlook{
-    
-  
-    display: none
-    
-}
-
-.imagenlook--show {
-    width: 100%;
-
-    display: block;
-    grid-template-columns: 50% 50%;
-}
    
 
 @media (max-width: 576px) {
@@ -964,21 +526,9 @@ h1, h2, h3,
         width: unset;
     }
 
-    .imagenlook--show {
-        width: 100%;
-  
-        display: block;
-        grid-template-columns: 50% 50%;
-    }
-
-    .imagenlook{
     
-  
-        display: none;
-        
-    }
 
-
+    
 
 }
 }
@@ -989,26 +539,10 @@ h1, h2, h3,
     .hero{
         margin-top: 10px;
     }
-    .nav{
-        height: 15%;
-        display: grid;
-        grid-template-rows: 20px 50px;
-        
-    }
+    
   
-    .nav.container{
-        width: 95%;
-        margin: 0 10px 0 10px;
-        
-        
-       
-        z-index: 100;
-   
-    }
+    
 
-    .container{
-        gap: 0rem;
-    }
 
     
 
@@ -1016,49 +550,20 @@ h1, h2, h3,
 
   
 
-    .heros__container{
-        padding-top: 170px;
-
     
-    }
 
     .rebaja{
         padding-top: 170px;
     }
 
-    .imagenesrebs{
-        width: 94%;
-        display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
-        gap: 2em;
-        margin: auto;
-        
     
-    }
     
-
 
   
-    .herosss__container{
-        padding-top: 120px;
+    
 
     
-    }
-
-    .nav__title{
-        font-size: 10px;
-        width: 80%;
-        
-        align-content: center;
-    }
-    .nav__link{
-        font-size: 10px;
-        width: 100%;
-        padding-right: 10px;
-        gap: 1.5rem;
-        
-        
-    }
+    
    
     }
 
@@ -1071,7 +576,7 @@ h1, h2, h3,
         max-width: 800px;
         margin: auto;
         display:grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap:70px;
         padding: 30px 0px;
     }
@@ -1090,31 +595,46 @@ h1, h2, h3,
         margin-bottom: 25px;
         font-size: 20px;
     }
+    .pie-pagina .grupo-1 .box h2.pie-mayusculas{
+        text-transform: uppercase;
+    }
     .pie-pagina .grupo-1 .box p{
         color: #efefef;
         margin-bottom: 10px;
     }
+    .pie-pagina address{
+        font-style: normal;
+    }
+    /* Dirección y teléfono: se ven pulsables y tienen zona de toque cómoda */
     .pie-pagina .grupo-1 .box p a{
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
         color: #efefef;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+        text-decoration-color: var(--color-accent);
+    }
+    .pie-pagina .grupo-1 .box p:has(a){
+        margin-bottom: 0;
     }
     .pie-pagina .grupo-1 .box p a:hover{
         color: var(--color-accent);
     }
     .pie-pagina .grupo-1 .red-social a{
-     
-        
-       
-        
-        
-      
-       
-       
-        
-       
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        margin-left: -10px;
+        font-size: 2rem;
+        color: #efefef;
+        transition: color 0.2s ease;
     }
-   
-    .pie-pagina .grupo-1 .red-social a img{
-        width: 50px;
+    .pie-pagina .grupo-1 .red-social a:hover{
+        color: var(--color-accent);
     }
    
     .pie-pagina .grupo-2{
@@ -1133,9 +653,6 @@ h1, h2, h3,
             grid-gap:30px;
             padding: 35px 0px;
         }
-        .pie-pagina .grupo-1 .box p{
-            padding-right: 4.5rem;
-        }
     }
 
     .imagenes{
@@ -1147,17 +664,10 @@ h1, h2, h3,
     
     }
 
-    .contactocontainer{
-        gap: 1.2rem;
-        width: 95%;
-    }
+    
 
-    .heross__title{
-        font-size: 1.8rem;
-    }
-    .heros__title{
-        font-size: 1.8rem;
-    }
+    
+    
 
 /* Accesibilidad: enlace para saltar el menú e ir directo al contenido */
 .skip-link{
@@ -1173,6 +683,10 @@ h1, h2, h3,
 
 .skip-link:focus{
     left: 0;
+}
+
+.skip-link:hover{
+    color: #ffffff;
 }
 
 /* Foco visible para navegación por teclado */
@@ -1237,6 +751,10 @@ button:focus-visible{
 }
 
 @media (max-width: 500px){
+    /* deja sitio al botón flotante para que no tape el copyright */
+    .pie-pagina .grupo-2{
+        padding: 15px 72px;
+    }
     .whatsapp-float{
         right: 0.8rem;
         bottom: 0.8rem;
@@ -1338,7 +856,8 @@ button:focus-visible{
     box-shadow: 0 4px 14px rgba(14, 10, 50, 0.14);
 }
 
-.carrusel-campana:hover .carrusel-track{
+.carrusel-campana:hover .carrusel-track,
+.carrusel-campana:focus-within .carrusel-track{
     animation-play-state: paused;
 }
 
@@ -1364,5 +883,135 @@ button:focus-visible{
     }
     .carrusel-track{
         animation-duration: 57s;
+    }
+}
+
+/* Visítanos: cierre de la portada. Dirección, llamada, WhatsApp y mapa,
+   en el crema de la marca para separarlo del blanco del catálogo. */
+.visitanos{
+    background-color: var(--color-cream);
+    color: var(--color-navy-deep);
+    padding: clamp(3.5rem, 8vw, 6.5rem) 5%;
+    scroll-margin-top: 70px;
+}
+
+.visitanos__interior{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: clamp(2.5rem, 6vw, 5.5rem);
+    align-items: center;
+}
+
+.visitanos h2{
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0 0 0.45em;
+}
+
+.visitanos__texto{
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-navy);
+    margin: 0 0 1.6rem;
+    max-width: 34ch;
+}
+
+.visitanos address{
+    font-style: normal;
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 2.4vw, 1.6rem);
+    line-height: 1.35;
+    margin: 0 0 1.1rem;
+}
+
+.visitanos__horario{
+    margin: 0 0 2rem;
+    color: var(--color-navy);
+    font-size: 1.05rem;
+}
+
+.visitanos__horario div{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.6em;
+}
+
+.visitanos__horario dt{
+    font-weight: 600;
+    color: var(--color-navy-deep);
+}
+
+.visitanos__horario dd{
+    margin: 0;
+}
+
+/* Llamar a lo ancho; WhatsApp y Cómo llegar debajo, a medias */
+.visitanos__acciones{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    max-width: 30rem;
+}
+
+.visitanos__acciones .boton--principal{
+    grid-column: 1 / -1;
+}
+
+.boton{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    min-height: 52px;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    border: 1px solid var(--color-navy);
+    background-color: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.boton:hover{
+    background-color: var(--color-navy);
+    color: #ffffff;
+}
+
+.boton--principal{
+    background-color: var(--color-navy);
+    color: #ffffff;
+}
+
+.boton--principal:hover{
+    background-color: var(--color-navy-deep);
+    border-color: var(--color-navy-deep);
+}
+
+.boton i{
+    font-size: 1.1em;
+}
+
+.visitanos__mapa{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 0;
+    display: block;
+    background-color: #e9e2d6;
+}
+
+@media (max-width: 860px){
+    .visitanos__interior{
+        grid-template-columns: 1fr;
+    }
+    .visitanos__acciones{
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+    .visitanos__mapa{
+        aspect-ratio: 1 / 1;
     }
 }

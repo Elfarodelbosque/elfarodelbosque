@@ -47,6 +47,11 @@ body{
 
 }
 
+/* En la portada el vídeo va pegado al menú, sin hueco blanco entre medias */
+.hero--portada{
+    margin-bottom: 0;
+}
+
 .hero::before{
     content: "";
     position: absolute;

@@ -43,13 +43,42 @@
     const reducir = window.matchMedia('(prefers-reduced-motion: reduce)')
     const movil = window.matchMedia('(max-width: 768px)')
 
-    // Vídeos con versión de móvil: imagen fija vertical mientras carga
+    // Vídeos con versión de móvil: imagen fija y vídeo vertical en el móvil.
+    // El vídeo se elige aquí y no solo con <source media>, porque algunos
+    // navegadores del móvil ignoran ese atributo y cargaban el horizontal.
     function ajustarPosters() {
         document.querySelectorAll('video[data-poster-movil]').forEach(function (video) {
             if (!video.dataset.posterAncho) video.dataset.posterAncho = video.getAttribute('poster')
             video.poster = movil.matches ? video.dataset.posterMovil : video.dataset.posterAncho
+            if (video.dataset.srcMovil && video.dataset.srcAncho) {
+                const fuente = movil.matches ? video.dataset.srcMovil : video.dataset.srcAncho
+                if (video.getAttribute('src') !== fuente) {
+                    video.setAttribute('src', fuente)
+                    video.load()
+                }
+            }
         })
     }
+
+    // Botón de sonido del vídeo de portada: el vídeo empieza en silencio
+    // (los navegadores no dejan reproducir solos los vídeos con sonido)
+    document.querySelectorAll('.hero__sonido').forEach(function (botonSonido) {
+        const video = botonSonido.parentElement.querySelector('video')
+        const iconoSonido = botonSonido.querySelector('i')
+        if (!video) return
+        function pintar() {
+            const conSonido = !video.muted
+            botonSonido.setAttribute('aria-pressed', conSonido)
+            botonSonido.setAttribute('aria-label', conSonido ? 'Silenciar el vídeo' : 'Activar sonido del vídeo')
+            iconoSonido.className = conSonido ? 'fa-solid fa-volume-high' : 'fa-solid fa-volume-xmark'
+        }
+        botonSonido.addEventListener('click', function () {
+            video.muted = !video.muted
+            if (!video.muted && video.paused) video.play().catch(function () {})
+            pintar()
+        })
+        pintar()
+    })
 
     // Con "reducir movimiento" los vídeos se quedan en su imagen fija
     function aplicarMovimiento() {
@@ -77,7 +106,6 @@
         eraMovil = movil.matches
         ajustarPosters()
         document.querySelectorAll('video[data-poster-movil]').forEach(function (video) {
-            video.load()
             if (!reducir.matches) video.play().catch(function () {})
         })
     }

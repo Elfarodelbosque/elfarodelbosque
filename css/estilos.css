@@ -83,6 +83,7 @@ body{
 /* Hero container */
 
 .hero__container{
+    position: relative;
     width: 100%;
     align-items: center;
     
@@ -107,9 +108,47 @@ body{
     object-fit: cover;
 }
 
+/* Botón de sonido del vídeo de portada (el vídeo arranca sin sonido) */
+.hero__sonido{
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    background: rgba(20, 13, 8, 0.45);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.hero__sonido i{
+    width: 1.1em;
+    text-align: center;
+}
+.hero__sonido:hover{
+    background: rgba(20, 13, 8, 0.65);
+}
+.hero__sonido:focus-visible{
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
 @media (max-width: 768px){
     .videoinicio{
         aspect-ratio: 9 / 16;
+    }
+    .hero__sonido{
+        right: 16px;
+        bottom: 16px;
+        padding: 9px 15px;
     }
     /* Catálogo también en vertical. Los percheros entran por la derecha y se
        paran entre el 28% y el 69% del ancho del plano: un 3:4 centrado ahí
